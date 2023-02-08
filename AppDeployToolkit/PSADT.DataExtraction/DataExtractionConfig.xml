@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DataExtraction_Config>
+<!--# LICENSE #
+	PowerShell App Deployment Toolkit - Data Extraction Extension.
+	Copyright (C) 2023 - Leonardo Franco Maragna.
+	https://github.com/LFM8787/PSADT.DataExtraction
+-->
+	<!--Configuration File Details-->
+	<Config_File>
+		<Config_Version>1.0</Config_Version>
+		<Config_Date>2023/02/08</Config_Date>
+	</Config_File>
+
+	<!--Data Extraction General Options-->
+	<DataExtraction_Options>
+		<ExitScriptOnError>False</ExitScriptOnError>
+		<!-- [True/False] - Calls the Exit-Script function to perform cleanup actions instead of only throw an error. -->
+	</DataExtraction_Options>
+	<!--Data Extraction General Options-->
+</DataExtraction_Config>
