@@ -38,7 +38,7 @@ Get-ApplicationMuiCache -ProcessName 'notepad'
   ApplicationCompany = Microsoft Corporation
 
 # Gets the file version information from an executable file, like FileDescription and CompanyName properties.
-  Get-FileVersionInfo -Path 'C:\Windows\explorer.exe'
+Get-FileVersionInfo -Path 'C:\Windows\explorer.exe'
   OriginalFilename  : EXPLORER.EXE.MUI
   FileDescription   : Windows Explorer
   ProductName       : Microsoft® Windows® Operating System
