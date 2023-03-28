@@ -1,4 +1,4 @@
-# PSADT.DataExtraction1.0
+# PSADT.DataExtraction
 Extension for PowerShell App Deployment Toolkit to get strings and icons contained in executables and library as well as cache MUI information from registry.
 
 ## Features
@@ -38,7 +38,7 @@ Get-ApplicationMuiCache -ProcessName 'notepad'
   ApplicationCompany = Microsoft Corporation
 
 # Gets the file version information from an executable file, like FileDescription and CompanyName properties.
-  Get-FileVersionInfo -Path 'C:\Windows\explorer.exe'
+Get-FileVersionInfo -Path 'C:\Windows\explorer.exe'
   OriginalFilename  : EXPLORER.EXE.MUI
   FileDescription   : Windows Explorer
   ProductName       : Microsoft® Windows® Operating System
@@ -78,7 +78,7 @@ Get-ApplicationMuiCache -ProcessName 'notepad'
 |70309|Get-IconFromFile|Unable to get display scale factor.|
 
 ## How to Install
-#### 1. Download and copy into Toolkit folder.
+#### 1. Download and extract into Toolkit folder.
 #### 2. Edit *AppDeployToolkitExtensions.ps1* file and add the following lines.
 #### 3. Create an empty array (only once if multiple extensions):
 ```PowerShell
