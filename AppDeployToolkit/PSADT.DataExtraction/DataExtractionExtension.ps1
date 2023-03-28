@@ -16,8 +16,8 @@
 	70309: Get-IconFromFile - Unable to get display scale factor.
 
 	Author:  Leonardo Franco Maragna
-	Version: 1.0
-	Date:    2023/02/08
+	Version: 1.0.1
+	Date:    2023/03/28
 #>
 [CmdletBinding()]
 Param (
@@ -31,8 +31,8 @@ Param (
 ## Variables: Extension Info
 $DataExtractionExtName = "DataExtractionExtension"
 $DataExtractionExtScriptFriendlyName = "Data Extraction Extension"
-$DataExtractionExtScriptVersion = "1.0"
-$DataExtractionExtScriptDate = "2023/02/08"
+$DataExtractionExtScriptVersion = "1.0.1"
+$DataExtractionExtScriptDate = "2023/03/28"
 $DataExtractionExtSubfolder = "PSADT.DataExtraction"
 $DataExtractionExtCustomTypesName = "DataExtractionExtension.cs"
 $DataExtractionExtIconExtractorCustomTypesName = "TsudaKageyuIconExtractor.cs"
@@ -46,6 +46,9 @@ $DataExtractionExtConfigFileName = "DataExtractionConfig.xml"
 if (-not $DataExtractionCustomTypesSourceCode.Exists) { throw "$($DataExtractionExtScriptFriendlyName) custom types source code file [$DataExtractionCustomTypesSourceCode] not found." }
 if (-not $DataExtractionIconExtractorCustomTypesSourceCode.Exists) { throw "$($DataExtractionExtScriptFriendlyName) custom types source code file [$DataExtractionIconExtractorCustomTypesSourceCode] not found." }
 if (-not $DataExtractionConfigFile.Exists) { throw "$($DataExtractionExtScriptFriendlyName) XML configuration file [$DataExtractionConfigFile] not found." }
+
+## Variables: Required Support Files
+[IO.FileInfo]$envImageresLibraryPath = Join-Path -Path $envSystem32Directory -ChildPath "imageres.dll"
 
 ## Import variables from XML configuration file
 [Xml.XmlDocument]$xmlDataExtractionConfigFile = Get-Content -LiteralPath $DataExtractionConfigFile -Encoding UTF8
